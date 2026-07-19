@@ -1,0 +1,8 @@
+import requests
+from bs4 import Beautifulsoup
+
+url = "https://example.com"
+page = requests.get(url)
+
+soup = BeautifulSoup(page.text,"html.parser")
+print(soup.title.text)
